@@ -61,6 +61,6 @@ export const delete_file = async(file) =>{
   }
   catch(error){
     console.error("Error deleting file:", error);
-    throw new Error("Failed to delete file");
+    throw new Error("An error occured");
   }
 };
