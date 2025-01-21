@@ -1,0 +1,28 @@
+Creating a new collection in Firestore
+
+import { doc, setDoc } from "firebase/firestore"; 
+
+// Add a new document in collection "cities"
+await setDoc(doc(db, "collection-name", "collection-id"), {
+  prop1: value1,
+  prop2: value2,
+  prop3: value3
+});
+
+Creating a new collection in Firestore with a random ID
+
+import { addDoc, collection } from "firebase/firestore"; 
+
+await addDoc(collection(db, "collection-name"), {
+  prop1: value1,
+  prop2: value2,
+  prop3: value3
+});
+
+db: The database
+
+"collection-name": The name of the collection in the database.
+
+"collection-id": The ID of the document inside of collection.
+
+{}: Document information.
