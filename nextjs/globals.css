@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+// Approach 1
+@layer base{
+  :root{
+    --tw-screen-sm: (max-width: 640px);
+    --tw-screen-md: (min-width: 641px) and (max-width: 768px);
+    --tw-screen-lg: (min-width: 769px) and (max-width: 1024px);
+    --tw-screen-xl: (min-width: 1025px) and (max-width: 1280px);
+    --tw-screen-2xl: (min-width: 1281px) and (max-width: 1536px);
+    --tw-screen-3xl: (min-width: 1537px) and (max-width: 1920px);
+  }
+}
+
+// Approach 2
+@layer base{
+  @custom-media --sm (max-width: 640px);
+  @custom-media --md (min-width: 641px) and (max-width: 768px);
+  @custom-media --lg (min-width: 769px) and (max-width: 1024px);
+  @custom-media --xl (min-width: 1025px) and (max-width: 1280px);
+  @custom-media --2xl (min-width: 1281px) and (max-width: 1536px);
+  @custom-media --3xl (min-width: 1537px) and (max-width: 1920px);
+}
+
+@media(--sm){
+  /* Styles for small screens */
+}
+
+@media(--lg){
+  /* Styles for large screens */
+}
